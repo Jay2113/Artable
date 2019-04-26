@@ -24,13 +24,17 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClicked(_ sender: Any) {
         guard let email = emailText.text, email.isNotEmpty,
-            let password = passwordText.text, password.isNotEmpty else { return }
+            let password = passwordText.text, password.isNotEmpty else {
+                simpleAlert(title: "Error", message: "Please fill out all the fields.")
+                return
+        }
         
         activityIndicator.startAnimating()
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
             
             if let error = error {
-                debugPrint(error)
+                debugPrint(error.localizedDescription)
+                self?.handleFireAuthError(error: error)
                 self?.activityIndicator.stopAnimating()
                 return
             }
@@ -42,6 +46,4 @@ class LoginVC: UIViewController {
     
     @IBAction func guestClicked(_ sender: Any) {
     }
-    
-    
 }
