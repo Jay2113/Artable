@@ -18,6 +18,14 @@
 		693E4ECB2272B45300FF111B /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E4EC82272B45300FF111B /* CategoryCell.swift */; };
 		693E4ECC2272B45300FF111B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693E4EC92272B45300FF111B /* CategoryCell.xib */; };
 		693E4ECD2272B45300FF111B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693E4EC92272B45300FF111B /* CategoryCell.xib */; };
+		69B6C1EA227408A500B9DF5C /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1E9227408A500B9DF5C /* ProductsVC.swift */; };
+		69B6C1EB227408A500B9DF5C /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1E9227408A500B9DF5C /* ProductsVC.swift */; };
+		69B6C1ED2274092200B9DF5C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1EC2274092200B9DF5C /* Product.swift */; };
+		69B6C1EE2274092200B9DF5C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1EC2274092200B9DF5C /* Product.swift */; };
+		69B6C1F122740ABE00B9DF5C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1EF22740ABE00B9DF5C /* ProductCell.swift */; };
+		69B6C1F222740ABE00B9DF5C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6C1EF22740ABE00B9DF5C /* ProductCell.swift */; };
+		69B6C1F322740ABE00B9DF5C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B6C1F022740ABE00B9DF5C /* ProductCell.xib */; };
+		69B6C1F422740ABE00B9DF5C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69B6C1F022740ABE00B9DF5C /* ProductCell.xib */; };
 		69C078FB226E7A07001A4D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C078FA226E7A07001A4D9F /* AppDelegate.swift */; };
 		69C078FD226E7A07001A4D9F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C078FC226E7A07001A4D9F /* HomeVC.swift */; };
 		69C07900226E7A07001A4D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C078FE226E7A07001A4D9F /* Main.storyboard */; };
@@ -49,6 +57,10 @@
 		693E4EC52272B36E00FF111B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		693E4EC82272B45300FF111B /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		693E4EC92272B45300FF111B /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		69B6C1E9227408A500B9DF5C /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		69B6C1EC2274092200B9DF5C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		69B6C1EF22740ABE00B9DF5C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		69B6C1F022740ABE00B9DF5C /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		69C078F7226E7A07001A4D9F /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C078FA226E7A07001A4D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69C078FC226E7A07001A4D9F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -117,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				693E4EC92272B45300FF111B /* CategoryCell.xib */,
+				69B6C1F022740ABE00B9DF5C /* ProductCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				693E4EC52272B36E00FF111B /* Category.swift */,
+				69B6C1EC2274092200B9DF5C /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +216,7 @@
 				69C07930226EA0C7001A4D9F /* RegisterVC.swift */,
 				69C078FA226E7A07001A4D9F /* AppDelegate.swift */,
 				69C078FC226E7A07001A4D9F /* HomeVC.swift */,
+				69B6C1E9227408A500B9DF5C /* ProductsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +246,7 @@
 			children = (
 				691E66E32270081A0072B082 /* RoundedViews.swift */,
 				693E4EC82272B45300FF111B /* CategoryCell.swift */,
+				69B6C1EF22740ABE00B9DF5C /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C07905226E7A08001A4D9F /* LaunchScreen.storyboard in Resources */,
+				69B6C1F322740ABE00B9DF5C /* ProductCell.xib in Resources */,
 				693E4ECC2272B45300FF111B /* CategoryCell.xib in Resources */,
 				69C07902226E7A08001A4D9F /* Assets.xcassets in Resources */,
 				69C07927226E9A06001A4D9F /* GoogleService-Info.plist in Resources */,
@@ -346,6 +363,7 @@
 				693E4ECD2272B45300FF111B /* CategoryCell.xib in Resources */,
 				69C0791D226E7AA3001A4D9F /* LaunchScreen.storyboard in Resources */,
 				69C07923226E7AD0001A4D9F /* Assets.xcassets in Resources */,
+				69B6C1F422740ABE00B9DF5C /* ProductCell.xib in Resources */,
 				69C07929226E9C33001A4D9F /* GoogleService-Info.plist in Resources */,
 				69C07918226E7AA3001A4D9F /* Main.storyboard in Resources */,
 			);
@@ -494,12 +512,15 @@
 				69C078FD226E7A07001A4D9F /* HomeVC.swift in Sources */,
 				69C07931226EA0C7001A4D9F /* RegisterVC.swift in Sources */,
 				69C078FB226E7A07001A4D9F /* AppDelegate.swift in Sources */,
+				69B6C1F122740ABE00B9DF5C /* ProductCell.swift in Sources */,
 				691E66E42270081A0072B082 /* RoundedViews.swift in Sources */,
 				69C0792F226EA0A9001A4D9F /* LoginVC.swift in Sources */,
 				6911CDB022729801008FA443 /* ForgotPasswordVC.swift in Sources */,
+				69B6C1EA227408A500B9DF5C /* ProductsVC.swift in Sources */,
 				6911CDB32272A1F3008FA443 /* FirebaseUtilities.swift in Sources */,
 				69C0793622700514001A4D9F /* Constants.swift in Sources */,
 				693E4ECA2272B45300FF111B /* CategoryCell.swift in Sources */,
+				69B6C1ED2274092200B9DF5C /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,9 +530,12 @@
 			files = (
 				69C07915226E7AA3001A4D9F /* ViewController.swift in Sources */,
 				6911CDB42272A288008FA443 /* FirebaseUtilities.swift in Sources */,
+				69B6C1EB227408A500B9DF5C /* ProductsVC.swift in Sources */,
 				69C07913226E7AA3001A4D9F /* AppDelegate.swift in Sources */,
 				693E4EC72272B36E00FF111B /* Category.swift in Sources */,
+				69B6C1F222740ABE00B9DF5C /* ProductCell.swift in Sources */,
 				693E4ECB2272B45300FF111B /* CategoryCell.swift in Sources */,
+				69B6C1EE2274092200B9DF5C /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
