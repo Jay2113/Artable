@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     var categories = [Category]()
     var selectedCategory: Category!
     var db: Firestore!
+    var listener: ListenerRegistration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,13 @@ class HomeVC: UIViewController {
                 }
             }
         }
-        fetchDocument()
     }
     
     func fetchDocument() {
         let documentReference = db.collection("categories").document("YlwuP8qeU8iC53NciNif")
-        documentReference.getDocument { (snap, error) in
+        
+        listener = documentReference.addSnapshotListener { (snap, error) in
+            self.categories.removeAll()
             guard let data = snap?.data() else { return }
             let newCategory = Category.init(data: data)
             self.categories.append(newCategory)
@@ -50,13 +52,34 @@ class HomeVC: UIViewController {
         }
     }
     
+    func fetchCollection() {
+        let collectionReference = db.collection("categories")
+        
+        listener = collectionReference.addSnapshotListener { (snap, error) in
+            guard let documents = snap?.documents else { return }
+            self.categories.removeAll()
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+            }
+            self.collectionView.reloadData()
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        //        fetchDocument()
+        fetchCollection()
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             // We are logged in
             logInOutButton.title = "Logout"
         } else {
             logInOutButton.title = "Login"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
     }
     
     fileprivate func presentLoginController() {
