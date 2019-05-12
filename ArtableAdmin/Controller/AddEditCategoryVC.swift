@@ -16,6 +16,9 @@ class AddEditCategoryVC: UIViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var categoryImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var categoryToEdit: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,17 @@ class AddEditCategoryVC: UIViewController {
         tap.numberOfTapsRequired = 1
         categoryImage.isUserInteractionEnabled = true
         categoryImage.addGestureRecognizer(tap)
+        
+        // If we are editing, categoryToEdit will != nil
+        if let category = categoryToEdit {
+            nameText.text = category.name
+            addButton.setTitle("Save Changes", for: .normal)
+            
+            if let url = URL(string: category.imageURL) {
+                categoryImage.contentMode = .scaleAspectFill
+                categoryImage.kf.setImage(with: url)
+            }
+        }
     }
     
     @objc func imageTapped() {
@@ -34,7 +48,6 @@ class AddEditCategoryVC: UIViewController {
     }
     
     @IBAction func addCategoryClicked(_ sender: Any) {
-        activityIndicator.startAnimating()
         uploadImageThenDocument()
     }
     
@@ -44,6 +57,8 @@ class AddEditCategoryVC: UIViewController {
             simpleAlert(title: "Error", message: "Must add category image and name")
             return
         }
+        
+        activityIndicator.startAnimating()
         
         // Step 1: Turn the image into Data
         guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
@@ -82,8 +97,15 @@ class AddEditCategoryVC: UIViewController {
         var documentReference: DocumentReference!
         var category = Category.init(name: nameText.text!, id: "", imageURL: url, timeStamp: Timestamp())
         
-        documentReference = Firestore.firestore().collection("categories").document()
-        category.id = documentReference.documentID
+        if let categoryToEdit = categoryToEdit {
+            // We are editing
+            documentReference = Firestore.firestore().collection("categories").document(categoryToEdit.id)
+            category.id = categoryToEdit.id
+        } else {
+            // New category
+            documentReference = Firestore.firestore().collection("categories").document()
+            category.id = documentReference.documentID
+        }
         
         let data = Category.modelToData(category: category)
         documentReference.setData(data, merge: true) { (error) in

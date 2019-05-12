@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69098A5B22862F1800B83644 /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69098A5A22862F1800B83644 /* AdminProductsVC.swift */; };
+		69098A5D22863CC800B83644 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69098A5C22863CC800B83644 /* AddEditProductsVC.swift */; };
 		6911CDB022729801008FA443 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6911CDAE22729801008FA443 /* ForgotPasswordVC.swift */; };
 		6911CDB122729801008FA443 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6911CDAF22729801008FA443 /* ForgotPasswordVC.xib */; };
 		6911CDB32272A1F3008FA443 /* FirebaseUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6911CDB22272A1F3008FA443 /* FirebaseUtilities.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		2E70A1563959B264ED8C4761 /* Pods-Artable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artable/Pods-Artable.debug.xcconfig"; sourceTree = "<group>"; };
 		60863888603785C29F6E10BB /* Pods-ArtableAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		69098A5A22862F1800B83644 /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
+		69098A5C22863CC800B83644 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		6911CDAE22729801008FA443 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		6911CDAF22729801008FA443 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		6911CDB22272A1F3008FA443 /* FirebaseUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilities.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				69C07912226E7AA3001A4D9F /* AppDelegate.swift */,
 				69F7AE7D2283966300BEF786 /* AddEditCategoryVC.swift */,
 				69C07914226E7AA3001A4D9F /* AdminHomeVC.swift */,
+				69098A5A22862F1800B83644 /* AdminProductsVC.swift */,
+				69098A5C22863CC800B83644 /* AddEditProductsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -561,12 +567,14 @@
 				69B6C1EB227408A500B9DF5C /* ProductsVC.swift in Sources */,
 				69F7AE77228392B600BEF786 /* HomeVC.swift in Sources */,
 				69C07913226E7AA3001A4D9F /* AppDelegate.swift in Sources */,
+				69098A5B22862F1800B83644 /* AdminProductsVC.swift in Sources */,
 				69F7AE7A228394D200BEF786 /* Extensions.swift in Sources */,
 				69F7AE7E2283966300BEF786 /* AddEditCategoryVC.swift in Sources */,
 				693E4EC72272B36E00FF111B /* Category.swift in Sources */,
 				69B6C1F222740ABE00B9DF5C /* ProductCell.swift in Sources */,
 				693E4ECB2272B45300FF111B /* CategoryCell.swift in Sources */,
 				69F7AE7B2283950F00BEF786 /* ProductDetailVC.swift in Sources */,
+				69098A5D22863CC800B83644 /* AddEditProductsVC.swift in Sources */,
 				69B6C1EE2274092200B9DF5C /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
